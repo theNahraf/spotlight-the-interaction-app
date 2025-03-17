@@ -4,7 +4,7 @@ import { style } from '@/styles/auth'
 import { Ionicons } from '@expo/vector-icons'
 import { COLORS } from '@/constants/theme'
 import { useSSO } from '@clerk/clerk-expo'
-import { useRouter } from 'expo-router'
+import { Link, useRouter } from 'expo-router'
 export default function login() {
   const {startSSOFlow}  = useSSO()
   const router = useRouter() //navigation manually
@@ -21,7 +21,7 @@ export default function login() {
   }
   return (
     <View style= {style.container}>
-
+      {/* <Link href={'/(tabs)'}  style={{color:"white"}}>to notification</Link> */}
       {/* brand section  */}
       <View style={style.brandSection}>
     <View style={style.logoContainer}>
